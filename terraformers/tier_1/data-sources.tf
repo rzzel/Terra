@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-northeast-1" //change to your region //changed
+  region = "ap-northeast-1" 
 }
 
 data "aws_availability_zones" "available" {
@@ -12,12 +12,12 @@ data "aws_vpc" "default" {
   default = true
 }
 
-data "aws_key_pair" "key_ko" { //change //changed
-  key_name = "key_ko" //change //changed
+data "aws_key_pair" "key_ko" { 
+  key_name = "key_ko" 
 }
 
 variable "private_subnets" {
   default = {
-    "t3_tier"  = 250 //can be any number as long as walang conflict  //changed //must be around 0 to 32
+    "t3_tier"  = 250 
   }
 }
